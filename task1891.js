@@ -1,4 +1,4 @@
-const calculatorWithArgumments = ([...values], operation) => {
+const calculatorWithArgumments = (values, operation) => {
     switch (operation) {
         case "addition":
             return values.reduce((prevValue, currValue) => prevValue + currValue);

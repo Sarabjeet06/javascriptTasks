@@ -2,12 +2,13 @@ const flattenObject= (newObj) =>{
     for(let key in newObj){
         if(newObj.hasOwnProperty(key)){
             let firstObj="";
-            if(typeof newObj[key] == "object"){
-                firstObj=key + '.';
-                console.log(firstObj);
+            if(typeof newObj[key] === "object"){
+                
                 flattenObject(newObj[key]);
+                
+
             }else{
-                console.log(firstObj+key+ " "+ newObj[key]);
+                console.log(firstObj+key+ ": "+ newObj[key]);
             }
         }
     }

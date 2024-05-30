@@ -27,8 +27,13 @@ const obj1={
         area:{
             near: "abcs",
             code: 123,
+            data:[{
+                satya:{
+                    details: 'hello'
+                }
+            }]
         }
     }
 }
 
-console.log(getDeepCopy(obj1));
+console.log(JSON.stringify(getDeepCopy(obj1)));

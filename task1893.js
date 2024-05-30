@@ -7,17 +7,17 @@ const validator = (arr) => {
     })
 }
 
-const calculator = ([...arr], operation) => {
+const calculator = (num1,num2, operation) => {
     if (validator(arr)) {
         switch (operation) {
             case "add":
-                return arr.reduce((prevValue, currValue) => prevValue + currValue);
+                return  num1 + num2;
             case "substract":
-                return arr.reduce((prevValue, currValue) => prevValue - currValue);
+                return num1-num2;
             case "divide":
-                return arr.reduce((prevValue, currValue) => prevValue / currValue);
+                return num1/num2;
             case "multiply":
-                return arr.reduce((prevValue, currValue) => prevValue * currValue);
+                return num1*num2;
         }
     }
     else{
@@ -26,8 +26,8 @@ const calculator = ([...arr], operation) => {
 }
 
 
-console.log(calculator([1, 2, 3], "add"));
-console.log(calculator([1, 2, "3", 4], "substract"));
-console.log(calculator([1, 2, 4], "substract"));
-console.log(calculator([1, 2, 3], "divide"));
-console.log(calculator([1, 2, 3], "multiply"));
+console.log(calculator(1,2, "add"));
+console.log(calculator(3,"4", "substract"));
+console.log(calculator(1, 2, "substract"));
+console.log(calculator(1, 2, "divide"));
+console.log(calculator(1, 2, "multiply"));
